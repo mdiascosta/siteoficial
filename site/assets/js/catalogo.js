@@ -1,0 +1,80 @@
+/* ============================================================
+   LARA COSTA — catálogo do protótipo
+   Fonte única de dados dos produtos. Em produção, isto vira a
+   resposta da API do WooCommerce (/wp-json/wc/store/products).
+   ============================================================ */
+window.LC_CATALOGO = {
+  'vestido-midi-linho': {
+    nome: 'Vestido Midi Linho Caramelo',
+    cat: 'Vestidos',
+    preco: 272.3,
+    precoDe: 389.0,
+    img: 'assets/img/prod-vestido.jpg',
+    url: 'produto.html',
+    cores: ['Marrom', 'Caramelo', 'Oliva'],
+    tamanhos: ['P', 'M', 'G', 'GG'],
+  },
+  'vestido-longo-oliva': {
+    nome: 'Vestido Longo Oliva',
+    cat: 'Vestidos',
+    preco: 329.0,
+    img: 'assets/img/prod-vestido-oliva.jpg',
+    url: 'produto.html',
+    cores: ['Oliva', 'Areia'],
+    tamanhos: ['P', 'M', 'G'],
+  },
+  'saia-midi-areia': {
+    nome: 'Saia Midi Areia',
+    cat: 'Vestidos',
+    preco: 189.0,
+    img: 'assets/img/prod-saia.jpg',
+    url: 'produto.html',
+    cores: ['Areia', 'Marrom'],
+    tamanhos: ['P', 'M', 'G', 'GG'],
+  },
+  'camisa-linho-branca': {
+    nome: 'Camisa Linho Branca',
+    cat: 'Blusas',
+    preco: 219.0,
+    img: 'assets/img/prod-camisa.jpg',
+    url: 'produto.html',
+    cores: ['Off-white', 'Oliva'],
+    tamanhos: ['P', 'M', 'G'],
+  },
+  'blusa-seda-off': {
+    nome: 'Blusa Seda Off-white',
+    cat: 'Blusas',
+    preco: 249.0,
+    img: 'assets/img/prod-blusa.jpg',
+    url: 'produto.html',
+    cores: ['Off-white', 'Oliva', 'Marrom'],
+    tamanhos: ['P', 'M', 'G', 'GG'],
+  },
+  'bolsa-couro-caramelo': {
+    nome: 'Bolsa Couro Caramelo',
+    cat: 'Bolsas',
+    preco: 549.0,
+    img: 'assets/img/prod-bolsa.jpg',
+    url: 'produto.html',
+    cores: ['Chocolate', 'Areia'],
+    tamanhos: ['Único'],
+  },
+  'brincos-dourados': {
+    nome: 'Brincos Dourados',
+    cat: 'Acessórios',
+    preco: 129.0,
+    img: 'assets/img/prod-brinco.jpg',
+    url: 'produto.html',
+    cores: ['Dourado', 'Bronze'],
+    tamanhos: ['Único'],
+  },
+  'colar-camadas': {
+    nome: 'Colar Camadas',
+    cat: 'Acessórios',
+    preco: 149.0,
+    img: 'assets/img/prod-colar.jpg',
+    url: 'produto.html',
+    cores: ['Dourado'],
+    tamanhos: ['Único'],
+  },
+};

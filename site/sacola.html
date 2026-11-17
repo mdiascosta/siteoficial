@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sacola — Lara Costa</title>
+<meta name="description" content="Sua sacola de compras Lara Costa.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#53381D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<div class="anuncio">Frete grátis acima de R$ 299 · <b>Parcele em até 6x sem juros</b></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <div class="header__barra">
+      <button class="icone burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <a href="index.html" class="header__logo" aria-label="Lara Costa — página inicial">
+        <img src="assets/img/logo-marrom.png" alt="Lara Costa — Roupas e Acessórios" width="2684" height="473">
+      </a>
+
+      <nav class="header__nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="loja.html?f=novidades">Novidades</a></li>
+          <li><a href="loja.html?f=vestidos">Vestidos</a></li>
+          <li><a href="loja.html?f=blusas">Blusas</a></li>
+          <li><a href="loja.html?f=bolsas">Bolsas</a></li>
+          <li><a href="loja.html?f=acessorios">Acessórios</a></li>
+          <li><a href="index.html#sobre">A loja</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acoes">
+        <button class="icone" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icone" aria-label="Minha conta">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        </button>
+        <a href="sacola.html" class="icone" aria-label="Sacola de compras">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="badge" aria-hidden="true" hidden>0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MENU MOBILE -->
+<div class="gaveta" id="gaveta" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="gaveta__veu"></div>
+  <div class="gaveta__painel">
+    <div class="gaveta__topo">
+      <img src="assets/img/logo-marrom.png" alt="Lara Costa" width="2684" height="473">
+      <button class="icone gaveta__fechar" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Menu mobile">
+      <a href="loja.html?f=novidades">Novidades</a>
+      <a href="loja.html?f=vestidos">Vestidos</a>
+      <a href="loja.html?f=blusas">Blusas</a>
+      <a href="loja.html?f=bolsas">Bolsas</a>
+      <a href="loja.html?f=acessorios">Acessórios</a>
+      <a href="index.html#sobre">A loja</a>
+    </nav>
+    <div class="gaveta__rodape">
+      <a href="#" class="btn">Falar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+  <div class="wrap">
+    <nav class="migalha" aria-label="Você está em">
+      <a href="index.html">Início</a><i>/</i>
+      <span aria-current="page">Sacola</span>
+    </nav>
+  </div>
+
+  <div class="wrap">
+    <div class="sacola">
+      <span class="eyebrow">Sua seleção</span>
+      <h1>Sacola</h1>
+
+      <!-- estado com itens -->
+      <div id="sacola-cheia" hidden>
+        <div class="progresso-frete">
+          <p id="msg-frete"></p>
+          <div class="barra"><i id="barra-frete" style="width:0%"></i></div>
+        </div>
+
+        <div class="sacola-grade">
+          <div>
+            <div class="itens" id="lista-itens"></div>
+            <p style="margin-top:20px">
+              <a href="loja.html" class="link-seta">Continuar comprando</a>
+            </p>
+          </div>
+
+          <aside class="resumo" aria-label="Resumo da sacola">
+            <h2>Resumo</h2>
+            <dl>
+              <div><dt>Subtotal</dt><dd id="r-subtotal">R$ 0,00</dd></div>
+              <div id="linha-economia" hidden><dt>Você economiza</dt><dd class="gratis" id="r-economia">—</dd></div>
+              <div id="linha-cupom" hidden><dt id="r-cupom-rotulo">Cupom</dt><dd class="gratis" id="r-cupom">—</dd></div>
+              <div><dt>Frete</dt><dd id="r-frete">—</dd></div>
+            </dl>
+
+            <div class="resumo__total">
+              <span>Total</span>
+              <strong id="r-total">R$ 0,00</strong>
+            </div>
+            <div class="resumo__pix" id="r-pix-box">No Pix: <b id="r-pix">—</b> · 5% de desconto</div>
+            <div class="resumo__parcela" id="r-parcela">—</div>
+
+            <a href="checkout.html" class="btn">Finalizar compra</a>
+
+            <div class="cupom">
+              <div class="cupom__linha">
+                <label for="cupom" class="skip">Cupom de desconto</label>
+                <input id="cupom" type="text" placeholder="Cupom de desconto" autocomplete="off">
+                <button type="button" class="btn btn--ghost" id="aplicar-cupom">Aplicar</button>
+              </div>
+              <div class="cupom__msg" id="cupom-msg" role="status" aria-live="polite"></div>
+            </div>
+
+            <div class="resumo__seguro">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Compra segura · dados criptografados
+            </div>
+            <div class="pag-aceitos">
+              <span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- estado vazio -->
+      <div class="vazio" id="sacola-vazia" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <h2>Sua sacola está vazia</h2>
+        <p>Explore a coleção e escolha as peças que combinam com você. A curadoria é nossa, o estilo é seu.</p>
+        <a href="loja.html" class="btn">Ver a coleção</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/img/logo-creme.png" alt="Lara Costa — Roupas e Acessórios" width="2684" height="473" loading="lazy">
+        <p>Roupas e acessórios com curadoria. Atendimento de boutique, do primeiro clique à entrega.</p>
+        <div class="footer__sociais">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3c.5 2.6 2 4 4.5 4.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Loja</h4>
+        <ul>
+          <li><a href="loja.html?f=novidades">Novidades</a></li>
+          <li><a href="loja.html?f=vestidos">Vestidos</a></li>
+          <li><a href="loja.html?f=blusas">Blusas</a></li>
+          <li><a href="loja.html?f=bolsas">Bolsas</a></li>
+          <li><a href="loja.html?f=acessorios">Acessórios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Guia de medidas</a></li>
+          <li><a href="#">Formas de pagamento</a></li>
+          <li><a href="#">Prazos de entrega</a></li>
+          <li><a href="#">Fale conosco</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visite a loja</h4>
+        <p>Rua das Acácias, 240 — Centro<br>Cerquilho · SP</p>
+        <p>Seg a Sex, 9h às 18h<br>Sáb, 9h às 13h</p>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 <b>Lara Costa</b> · CNPJ 00.000.000/0001-00</span>
+      <div class="pagamentos">
+        <span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="zap" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.9 1.2-1.6.1-3.9-1-5.6-2.6-1.5-1.5-2.7-3.6-2.6-5.2 0-.7.6-1.7 1.2-1.9.3-.1.7-.1.9.1.2.2.8 1.4.9 1.6.1.2 0 .5-.1.7l-.6.7c-.1.2-.2.4 0 .6.4.7 1.6 2 2.4 2.4.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.7-.1.3.1 1.4.7 1.6.8.2.2.2.5.1.8Z"/></svg>
+  <span>Fale com a gente</span>
+</a>
+
+
+<a href="#" class="zap" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.9 1.2-1.6.1-3.9-1-5.6-2.6-1.5-1.5-2.7-3.6-2.6-5.2 0-.7.6-1.7 1.2-1.9.3-.1.7-.1.9.1.2.2.8 1.4.9 1.6.1.2 0 .5-.1.7l-.6.7c-.1.2-.2.4 0 .6.4.7 1.6 2 2.4 2.4.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.7-.1.3.1 1.4.7 1.6.8.2.2.2.5.1.8Z"/></svg>
+  <span>Fale com a gente</span>
+</a>
+
+<script src="assets/js/catalogo.js"></script>
+<script src="assets/js/carrinho.js"></script>
+<script src="assets/js/pagina-sacola.js"></script>
+<script src="assets/js/loja.js"></script>
+</body>
+</html>

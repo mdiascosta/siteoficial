@@ -29,6 +29,7 @@
     clearTimeout(el._t);
     el._t = setTimeout(() => el.classList.remove('vis'), 2800);
   }
+  window.LC_Toast = toast;
 
   /* ---------- Header: sombra ao rolar ---------- */
   const header = $('#header');
@@ -148,22 +149,65 @@
       mais && mais.addEventListener('click', () => mudar(1));
     }
 
-    // Adicionar ao carrinho
+    // Adicionar à sacola
     const comprar = $('#comprar');
     if (comprar) {
       comprar.addEventListener('click', () => {
         const tam = $('#tam-escolhido');
-        if (tam && tam.textContent.trim() === '—') {
-          toast('Escolha um tamanho');
+        const tamTxt = tam ? tam.textContent.trim() : '—';
+
+        // Tamanho é obrigatório quando o produto tem grade
+        if (tam && tamTxt === '—') {
+          toast('Escolha um tamanho para continuar');
           const grupo = $('.tamanhos');
           grupo && grupo.scrollIntoView({ block: 'center', behavior: 'smooth' });
           return;
         }
-        const q = qtdInput ? qtdInput.value : 1;
-        toast(`${q} item(ns) na sacola · ${tam ? 'Tam ' + tam.textContent.trim() : ''}`);
-        const badge = $('.badge');
-        if (badge) badge.textContent = String((parseInt(badge.textContent, 10) || 0) + parseInt(q, 10));
+
+        const q = qtdInput ? parseInt(qtdInput.value, 10) || 1 : 1;
+        const corEl = $('#cor-escolhida');
+        const cor = corEl ? corEl.textContent.trim() : null;
+        const id = document.body.dataset.produto;
+
+        if (window.LC_Sacola && id) {
+          const r = window.LC_Sacola.adicionar(id, { cor: cor, tam: tamTxt, qtd: q });
+          if (!r.ok) {
+            toast(r.erro || 'Não foi possível adicionar');
+            return;
+          }
+          window.LC_Sacola.atualizarBadge();
+          toast(
+            r.item
+              ? `${r.item.nome} · ${r.item.tam} na sacola`
+              : 'Adicionado à sacola'
+          );
+          abrirMiniSacola();
+        } else {
+          toast('Adicionado à sacola');
+        }
       });
+    }
+
+    /* Mini-sacola: confirmação rápida com link direto para finalizar */
+    function abrirMiniSacola() {
+      let box = $('#mini-sacola');
+      if (!box) {
+        box = document.createElement('div');
+        box.id = 'mini-sacola';
+        box.className = 'mini-sacola';
+        box.setAttribute('role', 'status');
+        box.setAttribute('aria-live', 'polite');
+        box.innerHTML =
+          '<strong>Adicionado à sacola</strong>' +
+          '<div class="mini-sacola__acoes">' +
+          '<a href="sacola.html" class="btn" style="flex:1">Ver sacola</a>' +
+          '<a href="loja.html" class="btn btn--ghost" style="flex:1">Continuar</a>' +
+          '</div>';
+        document.body.appendChild(box);
+      }
+      box.classList.add('vis');
+      clearTimeout(box._t);
+      box._t = setTimeout(() => box.classList.remove('vis'), 6000);
     }
 
     // Cálculo de frete (simulado)
