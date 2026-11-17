@@ -887,3 +887,105 @@ h3{font-size:clamp(20px,2vw,24px);font-weight:600;line-height:1.3}
 @media(max-width:760px){
   .mini-sacola{right:14px;left:14px;width:auto;bottom:calc(14px + 58px)}
 }
+
+/* ============================================================
+   A LOJA (institucional)
+   ============================================================ */
+.loja-hero{position:relative;background:var(--lc-oliva-esc);overflow:hidden}
+.loja-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.loja-hero__veu{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(43,38,32,.55) 0%,rgba(43,38,32,.38) 40%,rgba(43,38,32,.72) 100%);
+}
+.loja-hero__in{position:relative;text-align:center;padding:clamp(70px,11vw,140px) 0 clamp(56px,8vw,96px);max-width:660px;margin:0 auto}
+.loja-hero .eyebrow{color:var(--lc-dourado)}
+.loja-hero h1{color:var(--lc-creme);font-size:clamp(36px,5.6vw,62px);margin:14px 0 0}
+.loja-hero p{color:#EDE4D6;font-weight:300;font-size:clamp(15px,1.4vw,17.5px);margin:18px auto 0;max-width:46ch}
+
+/* história em duas colunas */
+.historia{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,72px);align-items:center}
+.historia__txt h2{margin:10px 0 18px}
+.historia__txt p{color:#4A443C;font-size:16.5px;margin:0 0 14px;max-width:48ch}
+.historia__img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px}
+.historia__img img{width:100%;height:100%;object-fit:cover}
+.historia__img figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:16px 18px;
+  background:linear-gradient(to top,rgba(43,38,32,.78),transparent);
+  color:var(--lc-creme);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+}
+.assinatura{font-family:var(--f-display);font-style:italic;font-size:27px;color:var(--lc-marrom-medio);margin-top:20px}
+
+/* pilares */
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.pilar{background:var(--lc-branco);border:1px solid var(--lc-areia);border-radius:2px;padding:clamp(22px,2.6vw,30px)}
+.pilar svg{width:26px;height:26px;stroke:var(--lc-dourado);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.pilar h3{font-size:21px;margin-bottom:8px}
+.pilar p{font-size:14.5px;color:#4A443C;margin:0;line-height:1.7}
+
+/* letreiro em destaque */
+.letreiro{background:var(--lc-branco);border-top:1px solid var(--lc-areia);border-bottom:1px solid var(--lc-areia);padding:clamp(40px,5vw,64px) 0;text-align:center}
+.letreiro img{max-width:min(680px,100%);margin:0 auto 18px;border-radius:2px}
+.letreiro p{font-size:13.5px;color:var(--lc-marrom-medio);max-width:46ch;margin:0 auto}
+
+/* como chegar */
+.onde{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,56px);align-items:start}
+.onde__info h2{margin:10px 0 20px}
+.onde__bloco{border-top:1px solid var(--lc-areia);padding:16px 0}
+.onde__bloco:last-of-type{border-bottom:1px solid var(--lc-areia)}
+.onde__bloco h3{
+  font-family:var(--f-corpo);font-size:10.5px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--lc-marrom-medio);margin:0 0 6px;
+}
+.onde__bloco p{margin:0;font-size:15px;color:var(--lc-carvao);line-height:1.65}
+.onde__bloco p span{display:block;font-size:13px;color:var(--lc-marrom-medio);margin-top:3px}
+.onde__info .btn{margin-top:24px}
+.mapa{
+  position:relative;aspect-ratio:1;border:1px solid var(--lc-areia);border-radius:2px;
+  background:var(--lc-creme);overflow:hidden;display:grid;place-items:center;
+}
+.mapa__grade{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--lc-areia) 1px,transparent 1px),linear-gradient(90deg,var(--lc-areia) 1px,transparent 1px);
+  background-size:44px 44px;opacity:.55;
+}
+.mapa__rua{position:absolute;background:var(--lc-branco);box-shadow:0 0 0 1px var(--lc-areia)}
+.mapa__rua--h{left:0;right:0;height:26px;top:58%}
+.mapa__rua--v{top:0;bottom:0;width:22px;left:34%}
+.mapa__pino{
+  position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.mapa__pino i{
+  width:15px;height:15px;border-radius:50%;background:var(--lc-marrom);
+  box-shadow:0 0 0 6px rgba(83,56,29,.18),0 0 0 13px rgba(83,56,29,.08);
+  display:block;
+}
+.mapa__pino b{
+  font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--lc-marrom);background:var(--lc-branco);padding:5px 10px;border:1px solid var(--lc-areia);
+  border-radius:2px;margin-top:4px;
+}
+.mapa__nota{
+  position:absolute;bottom:12px;left:12px;right:12px;text-align:center;
+  font-size:10.5px;color:var(--lc-marrom-medio);letter-spacing:.04em;
+}
+
+/* CTA final */
+.cta-loja{background:var(--lc-oliva-esc);position:relative;overflow:hidden;text-align:center}
+.cta-loja::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--lc-dourado);opacity:.55}
+.cta-loja .wrap{padding:clamp(48px,6vw,78px) 0}
+.cta-loja .eyebrow{color:var(--lc-dourado)}
+.cta-loja h2{color:var(--lc-creme);margin:10px 0 0}
+.cta-loja p{color:#DDD5C6;font-weight:300;font-size:15px;margin:14px auto 26px;max-width:42ch}
+.cta-loja__botoes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-loja .btn--claro:hover{background:var(--lc-dourado);border-color:var(--lc-dourado)}
+
+@media(max-width:1080px){
+  .historia,.onde{grid-template-columns:1fr;gap:30px}
+  .historia__img{aspect-ratio:1;order:-1}
+  .pilares{grid-template-columns:1fr}
+  .mapa{aspect-ratio:4/3}
+}
+@media(max-width:760px){
+  .loja-hero__in{padding:clamp(52px,16vw,90px) 0 clamp(46px,12vw,70px)}
+  .letreiro img{max-width:100%}
+}

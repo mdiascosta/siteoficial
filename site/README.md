@@ -21,6 +21,7 @@ python3 -m http.server 8000
 | `sacola.html` | Sacola com cupom, frete grátis progressivo e totais |
 | `checkout.html` | Checkout em 3 etapas com validação |
 | `obrigado.html` | Confirmação do pedido |
+| `a-loja.html` | Institucional: história, pilares, endereço e horário |
 
 ## Estrutura
 
