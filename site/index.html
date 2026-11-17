@@ -36,21 +36,21 @@
 <header class="header" id="header">
   <div class="wrap">
     <div class="header__barra">
-      <button class="icone burger" aria-label="Abrir menu" aria-expanded="false">
+      <button class="icone burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
 
-      <a href="#" class="header__logo" aria-label="Lara Costa — página inicial">
+      <a href="index.html" class="header__logo" aria-label="Lara Costa — página inicial">
         <img src="assets/img/logo-marrom.png" alt="Lara Costa — Roupas e Acessórios" width="2684" height="473">
       </a>
 
       <nav class="header__nav" aria-label="Menu principal">
         <ul>
-          <li><a href="#">Novidades</a></li>
-          <li><a href="#">Vestidos</a></li>
-          <li><a href="#">Blusas</a></li>
-          <li><a href="#">Bolsas</a></li>
-          <li><a href="#">Acessórios</a></li>
+          <li><a href="loja.html?f=novidades">Novidades</a></li>
+          <li><a href="loja.html?f=vestidos">Vestidos</a></li>
+          <li><a href="loja.html?f=blusas">Blusas</a></li>
+          <li><a href="loja.html?f=bolsas">Bolsas</a></li>
+          <li><a href="loja.html?f=acessorios">Acessórios</a></li>
           <li><a href="#sobre">A loja</a></li>
         </ul>
       </nav>
@@ -71,6 +71,31 @@
   </div>
 </header>
 
+
+<!-- MENU MOBILE -->
+<div class="gaveta" id="gaveta" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="gaveta__veu"></div>
+  <div class="gaveta__painel">
+    <div class="gaveta__topo">
+      <img src="assets/img/logo-marrom.png" alt="Lara Costa" width="2684" height="473">
+      <button class="icone gaveta__fechar" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Menu mobile">
+      <a href="loja.html?f=novidades">Novidades</a>
+      <a href="loja.html?f=vestidos">Vestidos</a>
+      <a href="loja.html?f=blusas">Blusas</a>
+      <a href="loja.html?f=bolsas">Bolsas</a>
+      <a href="loja.html?f=acessorios">Acessórios</a>
+      <a href="#sobre">A loja</a>
+    </nav>
+    <div class="gaveta__rodape">
+      <a href="#" class="btn">Falar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 <main id="conteudo">
 
   <!-- HERO -->
@@ -83,7 +108,7 @@
         <h1>O caimento que<br>veste a sua <em>história</em></h1>
         <p>Peças escolhidas uma a uma, em tecidos que respiram e caem bem. Moda com curadoria — como sair da nossa loja e entrar no seu dia.</p>
         <div class="hero__ctas">
-          <a href="#novidades" class="btn">Ver a coleção</a>
+          <a href="loja.html" class="btn">Ver a coleção</a>
           <a href="#sobre" class="btn btn--ghost">Conhecer a loja</a>
         </div>
       </div>
@@ -122,11 +147,11 @@
           <span class="eyebrow">Explore</span>
           <h2>Por categoria</h2>
         </div>
-        <a href="#" class="link-seta">Ver tudo</a>
+        <a href="loja.html" class="link-seta">Ver tudo</a>
       </div>
 
       <div class="categorias">
-        <a href="#" class="categoria revela">
+        <a href="loja.html" class="categoria revela">
           <img src="assets/img/prod-vestido.jpg" alt="Vestido midi de linho caramelo" width="896" height="1200" loading="lazy">
           <div class="categoria__txt">
             <span>48 peças</span>
@@ -134,7 +159,7 @@
             <span class="seta">Ver categoria</span>
           </div>
         </a>
-        <a href="#" class="categoria revela">
+        <a href="loja.html" class="categoria revela">
           <img src="assets/img/prod-bolsa.jpg" alt="Bolsa de couro chocolate" width="896" height="1200" loading="lazy">
           <div class="categoria__txt">
             <span>22 peças</span>
@@ -142,7 +167,7 @@
             <span class="seta">Ver categoria</span>
           </div>
         </a>
-        <a href="#" class="categoria revela">
+        <a href="loja.html" class="categoria revela">
           <img src="assets/img/prod-brinco.jpg" alt="Brincos dourados artesanais" width="896" height="1200" loading="lazy">
           <div class="categoria__txt">
             <span>64 peças</span>
@@ -162,7 +187,7 @@
           <span class="eyebrow">Recém-chegadas</span>
           <h2>Novidades da semana</h2>
         </div>
-        <a href="#" class="link-seta">Ver a coleção</a>
+        <a href="loja.html" class="link-seta">Ver a coleção</a>
       </div>
 
       <div class="produtos">
@@ -172,7 +197,7 @@
             <button class="produto__fav" aria-label="Favoritar Vestido Midi Linho">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4Z"/></svg>
             </button>
-            <a href="#" class="produto__link" aria-label="Ver produto"><span class="selo">−30%</span>
+            <a href="produto.html" class="produto__link" aria-label="Ver produto"><span class="selo">−30%</span>
             
             <img src="assets/img/prod-vestido.jpg" alt="Vestido Midi Linho Caramelo" width="896" height="1200" loading="lazy"></a>
           </div>
@@ -194,7 +219,7 @@
             <button class="produto__fav" aria-label="Favoritar Bolsa Couro Caramelo">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4Z"/></svg>
             </button>
-            <a href="#" class="produto__link" aria-label="Ver produto"><span class="selo selo--novo">Novo</span>
+            <a href="produto.html" class="produto__link" aria-label="Ver produto"><span class="selo selo--novo">Novo</span>
             
             <img src="assets/img/prod-bolsa.jpg" alt="Bolsa em couro chocolate com ferragens douradas" width="896" height="1200" loading="lazy"></a>
           </div>
@@ -215,7 +240,7 @@
             <button class="produto__fav" aria-label="Favoritar Brincos Dourados">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4Z"/></svg>
             </button>
-            <a href="#" class="produto__link" aria-label="Ver produto"><img src="assets/img/prod-brinco.jpg" alt="Brincos dourados artesanais sobre papel creme" width="896" height="1200" loading="lazy"></a>
+            <a href="produto.html" class="produto__link" aria-label="Ver produto"><img src="assets/img/prod-brinco.jpg" alt="Brincos dourados artesanais sobre papel creme" width="896" height="1200" loading="lazy"></a>
           </div>
           <div class="produto__info">
             <span class="produto__cat">Acessórios</span>
@@ -234,7 +259,7 @@
             <button class="produto__fav" aria-label="Favoritar Blusa Seda Off-white">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4Z"/></svg>
             </button>
-            <a href="#" class="produto__link" aria-label="Ver produto"><span class="selo selo--novo">Novo</span>
+            <a href="produto.html" class="produto__link" aria-label="Ver produto"><span class="selo selo--novo">Novo</span>
             
             <img src="assets/img/prod-blusa.jpg" alt="Blusa de seda off-white sobre fundo creme" width="896" height="1200" loading="lazy"></a>
           </div>
@@ -344,7 +369,7 @@
           <p>Receba lançamentos e liquidações com prioridade. Sem spam — só o que vale a pena.</p>
         </div>
         <div>
-          <form onsubmit="event.preventDefault();this.reset();alert('Inscrição registrada! (protótipo)')">
+          <form id="form-news" novalidate>
             <label for="email" class="skip">Seu e-mail</label>
             <input id="email" type="email" name="email" placeholder="seu@email.com.br" required autocomplete="email">
             <button type="submit" class="btn btn--claro">Quero receber</button>
@@ -380,11 +405,11 @@
       <div>
         <h4>Loja</h4>
         <ul>
-          <li><a href="#">Novidades</a></li>
-          <li><a href="#">Vestidos</a></li>
-          <li><a href="#">Blusas</a></li>
-          <li><a href="#">Bolsas</a></li>
-          <li><a href="#">Acessórios</a></li>
+          <li><a href="loja.html?f=novidades">Novidades</a></li>
+          <li><a href="loja.html?f=vestidos">Vestidos</a></li>
+          <li><a href="loja.html?f=blusas">Blusas</a></li>
+          <li><a href="loja.html?f=bolsas">Bolsas</a></li>
+          <li><a href="loja.html?f=acessorios">Acessórios</a></li>
         </ul>
       </div>
 
@@ -421,28 +446,6 @@
   <span>Fale com a gente</span>
 </a>
 
-<script>
-  // Header: sombra ao rolar
-  const header = document.getElementById('header');
-  const aoRolar = () => header.classList.toggle('rolou', window.scrollY > 12);
-  window.addEventListener('scroll', aoRolar, {passive:true});
-  aoRolar();
-
-  // Revelação suave das seções
-  const itens = document.querySelectorAll('.revela');
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver((entradas) => {
-      entradas.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('vis'), Math.min(i, 5) * 70);
-          obs.unobserve(e.target);
-        }
-      });
-    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
-    itens.forEach(el => obs.observe(el));
-  } else {
-    itens.forEach(el => el.classList.add('vis'));
-  }
-</script>
+<script src="assets/js/loja.js"></script>
 </body>
 </html>
