@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lara Costa — Paleta & Tipografia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lc-marrom:#53381D; --lc-oliva:#6F7360; --lc-dourado:#CDA767;
+    --lc-creme:#F7F3EC;  --lc-branco:#FFFDFA; --lc-carvao:#2B2620;
+    --lc-areia:#E8D9BC;  --lc-terracota:#A6503C; --lc-oliva-esc:#4A4D40;
+    --lc-marrom-medio:#7B6752; --lc-marrom-hover:#6B4A28;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--lc-creme); color:var(--lc-carvao);
+    font-family:"Jost",system-ui,sans-serif; font-weight:400;
+    line-height:1.7; padding:0 0 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:500;color:var(--lc-marrom-medio);
+  }
+  h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(40px,6vw,66px);line-height:1.08;letter-spacing:.01em;color:var(--lc-marrom)}
+  h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.2;color:var(--lc-marrom);margin-bottom:6px}
+  h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:24px;line-height:1.3;color:var(--lc-marrom)}
+  p{max-width:62ch}
+  /* header */
+  header{
+    background:var(--lc-branco);border-bottom:1px solid var(--lc-areia);
+    padding:22px 0;margin-bottom:0;text-align:center;
+  }
+  .logo-words{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;letter-spacing:.14em;color:var(--lc-marrom);line-height:1}
+  .logo-sub{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--lc-marrom-medio);margin-top:9px}
+  .logo-rule{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:10px}
+  .logo-rule i{height:1px;width:70px;background:var(--lc-dourado);display:block}
+  /* hero */
+  .hero{padding:64px 0 56px;border-bottom:1px solid var(--lc-areia)}
+  .hero p{margin-top:18px;color:var(--lc-marrom-medio);font-size:17px}
+  .btn{
+    display:inline-block;margin-top:28px;padding:15px 34px;border-radius:2px;
+    background:var(--lc-marrom);color:var(--lc-creme);text-decoration:none;
+    font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--lc-marrom);transition:.25s;
+  }
+  .btn:hover{background:var(--lc-marrom-hover);border-color:var(--lc-marrom-hover)}
+  .btn-ghost{background:transparent;color:var(--lc-marrom);margin-left:10px}
+  .btn-ghost:hover{background:var(--lc-marrom);color:var(--lc-creme)}
+  /* sections */
+  section{padding:52px 0;border-bottom:1px solid var(--lc-areia)}
+  section:last-of-type{border-bottom:none}
+  .sec-head{margin-bottom:30px}
+  /* swatches */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+  .sw{border:1px solid var(--lc-areia);border-radius:2px;overflow:hidden;background:var(--lc-branco)}
+  .sw .chip{height:92px;display:flex;align-items:flex-end;padding:10px}
+  .sw .chip span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+  .sw .meta{padding:11px 13px 13px}
+  .sw .meta b{display:block;font-size:13px;font-weight:500;color:var(--lc-carvao);letter-spacing:.01em}
+  .sw .meta code{font-family:ui-monospace,monospace;font-size:12px;color:var(--lc-marrom-medio)}
+  .sw .meta em{display:block;font-style:normal;font-size:11px;color:var(--lc-marrom-medio);margin-top:4px;line-height:1.4}
+  /* ratio bars */
+  .ratio-row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--lc-areia);font-size:14px}
+  .ratio-row:last-child{border-bottom:none}
+  .demo{width:112px;padding:7px 10px;border-radius:2px;text-align:center;font-size:12px;letter-spacing:.06em;flex-shrink:0}
+  .bar{flex:1;height:5px;background:var(--lc-areia);border-radius:3px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--lc-oliva)}
+  .ratio-row .val{font-family:ui-monospace,monospace;font-size:12px;width:52px;text-align:right;color:var(--lc-marrom-medio)}
+  .pass{font-size:10px;letter-spacing:.1em;font-weight:500;color:#5C6B4F;width:52px;text-align:right}
+  .fail{color:var(--lc-terracota)}
+  /* type specimen */
+  .spec{border-left:2px solid var(--lc-dourado);padding-left:20px;margin-bottom:30px}
+  .spec:last-child{margin-bottom:0}
+  .spec .tag{font-family:ui-monospace,monospace;font-size:11px;color:var(--lc-marrom-medio);margin-bottom:4px}
+  /* proportion */
+  .prop{display:flex;height:56px;border-radius:2px;overflow:hidden;margin-top:8px;border:1px solid var(--lc-areia)}
+  .prop div{display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.1em;font-weight:500}
+  /* product mock */
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+  .card{background:var(--lc-branco);border:1px solid var(--lc-areia);border-radius:2px;overflow:hidden;position:relative}
+  .card .ph{height:190px;background:linear-gradient(135deg,#EDE6DA,#DDD2BF);display:flex;align-items:center;justify-content:center;color:#B4A38B;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  .card .body{padding:15px 16px 18px}
+  .card .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--lc-marrom-medio)}
+  .card h3{margin:6px 0 4px}
+  .card .price{font-size:17px;font-weight:500;color:var(--lc-marrom)}
+  .card .price s{font-size:13px;color:var(--lc-marrom-medio);font-weight:300;margin-right:7px}
+  .onsale{
+    position:absolute;top:10px;left:10px;background:var(--lc-terracota);color:#fff;
+    font-size:10px;letter-spacing:.12em;padding:4px 9px;font-weight:500;
+  }
+  .swatch-dots{display:flex;gap:5px;margin-top:10px}
+  .swatch-dots i{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+  /* footer band */
+  .band{background:var(--lc-oliva-esc);color:var(--lc-areia);padding:34px 0;margin-top:0;text-align:center}
+  .band .eyebrow{color:var(--lc-dourado)}
+  .band h2{color:var(--lc-creme)}
+  .footnote{font-size:12px;color:var(--lc-marrom-medio);padding-top:26px}
+  @media(max-width:600px){
+    .btn-ghost{margin-left:0;margin-top:12px}
+    .ratio-row .bar{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo-words">LARA COSTA</div>
+    <div class="logo-rule"><i></i><span class="logo-sub">Roupas e Acessórios</span><i></i></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Proposta de identidade digital</span>
+    <h1>Elegância que<br>vem da fachada</h1>
+    <p>Marrom cacau do logotipo, oliva da parede da loja e dourado das linhas do letreiro. Uma paleta terrosa e atemporal — feita para vender moda sem parecer fast-fashion.</p>
+    <a href="#" class="btn">Ver coleção</a>
+    <a href="#" class="btn btn-ghost">Nossa loja</a>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">01 — Cores de marca</span>
+      <h2>Amostradas nas suas imagens</h2>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#53381D"><span style="color:#E8D9BC">Primária</span></div><div class="meta"><b>Marrom Cacau</b><code>#53381D</code><em>Extraído do logotipo</em></div></div>
+      <div class="sw"><div class="chip" style="background:#6F7360"><span style="color:#F7F3EC">Secundária</span></div><div class="meta"><b>Oliva Fachada</b><code>#6F7360</code><em>Extraído da parede</em></div></div>
+      <div class="sw"><div class="chip" style="background:#CDA767"><span style="color:#53381D">Acento</span></div><div class="meta"><b>Dourado Areia</b><code>#CDA767</code><em>Linhas do letreiro</em></div></div>
+      <div class="sw"><div class="chip" style="background:#4A4D40"><span style="color:#E8D9BC">Footer</span></div><div class="meta"><b>Oliva Profundo</b><code>#4A4D40</code><em>Rodapé e faixas</em></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">02 — Neutros e apoio</span>
+      <h2>O que sustenta o site</h2>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#F7F3EC;border-bottom:1px solid #E8D9BC"><span style="color:#7B6752">Fundo</span></div><div class="meta"><b>Creme Papel</b><code>#F7F3EC</code><em>Fundo padrão</em></div></div>
+      <div class="sw"><div class="chip" style="background:#FFFDFA;border-bottom:1px solid #E8D9BC"><span style="color:#7B6752">Superfície</span></div><div class="meta"><b>Branco Quente</b><code>#FFFDFA</code><em>Cards, header</em></div></div>
+      <div class="sw"><div class="chip" style="background:#2B2620"><span style="color:#E8D9BC">Texto</span></div><div class="meta"><b>Carvão</b><code>#2B2620</code><em>Nunca use preto puro</em></div></div>
+      <div class="sw"><div class="chip" style="background:#7B6752"><span style="color:#F7F3EC">Apoio</span></div><div class="meta"><b>Marrom Areia</b><code>#7B6752</code><em>Legendas, metadados</em></div></div>
+      <div class="sw"><div class="chip" style="background:#E8D9BC"><span style="color:#53381D">Borda</span></div><div class="meta"><b>Areia Clara</b><code>#E8D9BC</code><em>Divisórias, inputs</em></div></div>
+      <div class="sw"><div class="chip" style="background:#A6503C"><span style="color:#fff">Alerta</span></div><div class="meta"><b>Terracota</b><code>#A6503C</code><em>Só desconto/urgência</em></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">03 — Proporção 60·30·10</span>
+      <h2>Para não ficar “marrom demais”</h2>
+    </div>
+    <div class="prop">
+      <div style="flex:60;background:#F7F3EC;color:#7B6752">60% CREME</div>
+      <div style="flex:30;background:#53381D;color:#E8D9BC">30% MARROM</div>
+      <div style="flex:10;background:#CDA767;color:#53381D">10%</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">04 — Contraste WCAG</span>
+      <h2>Acessibilidade validada</h2>
+      <p style="color:#7B6752;margin-top:8px;font-size:15px">O dourado reprova como cor de texto sobre creme (2.04). Use-o apenas em linhas, ícones e ornamentos — ou sobre o marrom.</p>
+    </div>
+    <div class="ratio-row"><div class="demo" style="background:#F7F3EC;color:#2B2620;border:1px solid #E8D9BC">Texto</div><span style="flex:1;font-size:13px">Carvão sobre Creme</span><div class="bar"><i style="width:100%"></i></div><span class="val">13.55</span><span class="pass">AAA</span></div>
+    <div class="ratio-row"><div class="demo" style="background:#F7F3EC;color:#53381D;border:1px solid #E8D9BC">Texto</div><span style="flex:1;font-size:13px">Marrom sobre Creme</span><div class="bar"><i style="width:72%"></i></div><span class="val">9.73</span><span class="pass">AAA</span></div>
+    <div class="ratio-row"><div class="demo" style="background:#53381D;color:#F7F3EC">Botão</div><span style="flex:1;font-size:13px">Creme sobre Marrom</span><div class="bar"><i style="width:72%"></i></div><span class="val">9.73</span><span class="pass">AAA</span></div>
+    <div class="ratio-row"><div class="demo" style="background:#A6503C;color:#fff">Selo</div><span style="flex:1;font-size:13px">Branco sobre Terracota</span><div class="bar"><i style="width:37%"></i></div><span class="val">4.95</span><span class="pass">AA</span></div>
+    <div class="ratio-row"><div class="demo" style="background:#F7F3EC;color:#CDA767;border:1px solid #E8D9BC">Dourado</div><span style="flex:1;font-size:13px">Dourado sobre Creme</span><div class="bar"><i style="width:15%;background:#A6503C"></i></div><span class="val">2.04</span><span class="pass fail">REPROVA</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">05 — Tipografia</span>
+      <h2>Cormorant Garamond + Jost</h2>
+    </div>
+    <div class="spec">
+      <div class="tag">H1 · Cormorant Garamond 500 · 64px — “Nova Coleção Verão”</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(38px,5vw,64px);line-height:1.1;color:#53381D">Nova Coleção Verão</div>
+    </div>
+    <div class="spec">
+      <div class="tag">H2 · Cormorant Garamond 500 · 40px — “Peças selecionadas”</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,3.2vw,40px);color:#53381D">Peças selecionadas</div>
+    </div>
+    <div class="spec">
+      <div class="tag">Corpo · Jost 400 · 17px / 1.7</div>
+      <p style="font-size:17px">Cada peça é escolhida a dedo pensando em quem veste com personalidade. Tecidos que caem bem, caimento que dura mais de uma estação e atendimento de quem conhece você pelo nome.</p>
+    </div>
+    <div class="spec">
+      <div class="tag">Eyebrow · Jost 500 · 12px · letter-spacing .22em</div>
+      <span class="eyebrow">Roupas e Acessórios</span>
+    </div>
+    <div class="spec">
+      <div class="tag">Botão · Jost 500 · 14px · letter-spacing .12em</div>
+      <a href="#" class="btn" style="margin-top:6px">Adicionar ao carrinho</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">06 — Aplicação real</span>
+      <h2>Como o card de produto fica</h2>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <span class="onsale">-30%</span>
+        <div class="ph">foto da peça</div>
+        <div class="body">
+          <div class="cat">Vestidos</div>
+          <h3>Vestido Midi Linho</h3>
+          <div class="price"><s>R$ 389</s>R$ 272,30</div>
+          <div class="swatch-dots"><i style="background:#53381D"></i><i style="background:#6F7360"></i><i style="background:#CDA767"></i></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph">foto da peça</div>
+        <div class="body">
+          <div class="cat">Bolsas</div>
+          <h3>Bolsa Couro Caramelo</h3>
+          <div class="price">R$ 549,00</div>
+          <div class="swatch-dots"><i style="background:#53381D"></i><i style="background:#E8D9BC"></i></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph">foto da peça</div>
+        <div class="body">
+          <div class="cat">Acessórios</div>
+          <h3>Brincos Dourados</h3>
+          <div class="price">R$ 129,00</div>
+          <div class="swatch-dots"><i style="background:#CDA767"></i><i style="background:#7B6752"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <span class="eyebrow">Rodapé · Oliva Profundo + Dourado</span>
+    <h2>Lara Costa</h2>
+    <p style="margin:0 auto;max-width:44ch;font-size:14px;color:#E8D9BC">Roupas e acessórios com curadoria. Atendimento de boutique, do primeiro clique à entrega.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="footnote">Cores extraídas por amostragem de pixels de <code>logotipo-oficial.png</code> e <code>fachada-loja.png</code>. Contrastes calculados conforme WCAG 2.1.</p>
+</div>
+
+</body>
+</html>
